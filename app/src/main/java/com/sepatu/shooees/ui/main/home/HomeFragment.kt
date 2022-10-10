@@ -5,11 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.StringRes
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayoutMediator
-import com.sepatu.shooees.R
 import com.sepatu.shooees.databinding.FragmentHomeBinding
 import com.sepatu.shooees.utils.DataDummy
 
@@ -28,14 +24,26 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        showListAllProducts()
         showListPopularProducts()
     }
 
     fun showListPopularProducts() {
         val products = DataDummy.generateDataProduct()
-        val productAdapter = HomeAdapter()
-        productAdapter.setProducts(products)
+        val productAdapter = PopularProductAdapter()
+        productAdapter.setPopularProducts(products)
         with(binding.rvPopularShoe) {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            setHasFixedSize(true)
+            adapter = productAdapter
+        }
+    }
+
+    fun showListAllProducts() {
+        val products = DataDummy.generateDataProduct()
+        val productAdapter = AllProductAdapter()
+        productAdapter.setAllProducts(products)
+        with(binding.rvAllShoe) {
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
             adapter = productAdapter

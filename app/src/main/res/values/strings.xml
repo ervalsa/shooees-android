@@ -20,4 +20,5 @@
     <string name="title_name">Name</string>
     <string name="title_username">Username</string>
     <string name="title_popular_shoes">Popular Shoes</string>
+    <string name="title_all_shoes">All Shoes</string>
 </resources>

@@ -5,20 +5,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sepatu.shooees.data.entity.ProductEntity
-import com.sepatu.shooees.databinding.ItemsProductBinding
+import com.sepatu.shooees.databinding.ItemProductsBinding
 
-class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+class AllProductAdapter : RecyclerView.Adapter<AllProductAdapter.HomeViewHolder>() {
 
     private var listProducts = ArrayList<ProductEntity>()
 
-    fun setProducts(product: List<ProductEntity>?) {
+    fun setAllProducts(product: List<ProductEntity>?) {
         if (product == null) return
         this.listProducts.clear()
         this.listProducts.addAll(product)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
-        val itemProductBinding = ItemsProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemProductBinding = ItemProductsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return HomeViewHolder(itemProductBinding)
     }
 
@@ -29,7 +29,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     override fun getItemCount(): Int = listProducts.size
 
-    class HomeViewHolder(private val binding: ItemsProductBinding) : RecyclerView.ViewHolder(binding.root) {
+    class HomeViewHolder(private val binding: ItemProductsBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(product: ProductEntity) {
             with(binding) {
                 tvTitle.text = product.name
