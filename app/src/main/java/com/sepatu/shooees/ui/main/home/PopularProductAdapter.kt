@@ -1,11 +1,13 @@
 package com.sepatu.shooees.ui.main.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sepatu.shooees.data.entity.ProductEntity
 import com.sepatu.shooees.databinding.ItemPopularProductsBinding
+import com.sepatu.shooees.ui.detail.DetailActivity
 
 class PopularProductAdapter : RecyclerView.Adapter<PopularProductAdapter.HomeViewHolder>() {
 
@@ -38,6 +40,12 @@ class PopularProductAdapter : RecyclerView.Adapter<PopularProductAdapter.HomeVie
                 Glide.with(itemView.context)
                     .load(product.image)
                     .into(imgProduct)
+
+                itemView.setOnClickListener {
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.EXTRA_DATA, product.id)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
     }
