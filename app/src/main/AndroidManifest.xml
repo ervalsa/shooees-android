@@ -22,10 +22,10 @@
             android:name=".ui.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.splash.SplashScreenActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.splash.SplashScreenActivity"
             android:exported="true">
 
             <intent-filter>
