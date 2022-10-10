@@ -13,7 +13,9 @@
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/bg_input.xml" value="0.1" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/bg_input_text.xml" value="0.1" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_baseline_unselect.xml" value="0.239" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_cart.xml" value="0.239" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_cart_select.xml" value="0.239" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_cart_unselect.xml" value="0.239" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_home.xml" value="0.1" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_home_select.xml" value="0.239" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_home_unselect.xml" value="0.2745" />
@@ -30,6 +32,7 @@
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/activity_splash.xml" value="0.17603850050658562" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_all_shoe.xml" value="0.17603850050658562" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_basket.xml" value="0.17603850050658562" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_cart.xml" value="0.25052083333333336" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_product.xml" value="0.17603850050658562" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_profile.xml" value="0.23143115942028986" />

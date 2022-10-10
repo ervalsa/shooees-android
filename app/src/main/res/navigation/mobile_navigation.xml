@@ -31,7 +31,7 @@
         tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/navigation_vart"
+        android:id="@+id/navigation_cart"
         android:name="com.sepatu.shooees.ui.main.cart.CartFragment"
         android:label="@string/title_cart"
         tools:layout="@layout/fragment_cart" />
