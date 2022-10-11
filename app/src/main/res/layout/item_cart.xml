@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_primary"
+    android:paddingTop="16dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2C2C2C">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carD_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_shoe" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/carD_image"
+                app:layout_constraintStart_toEndOf="@+id/carD_image"
+                app:layout_constraintTop_toTopOf="@+id/carD_image"
+                app:layout_constraintVertical_bias="0.32999998"
+                tools:text="Terrext Urban Low" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/primaryColor"
+                app:layout_constraintStart_toEndOf="@+id/carD_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:text="Rp. 4.000.000" />
+
+            <LinearLayout
+                android:id="@+id/linear_increament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btn_decrease"
+                    android:layout_width="40dp"
+                    android:backgroundTint="#504F5E"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_sum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_increament"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
