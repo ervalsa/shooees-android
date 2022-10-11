@@ -19,10 +19,14 @@
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_home.xml" value="0.1" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_home_select.xml" value="0.239" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_home_unselect.xml" value="0.2745" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_like_select.xml" value="0.2285" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_like_unselect.xml" value="0.2285" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_mail.xml" value="0.1105" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_product.xml" value="0.1" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_profile.xml" value="0.1" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_wishlist.xml" value="0.1" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_wishlist_select.xml" value="0.2285" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/ic_wishlist_unselect.xml" value="0.2285" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/drawable/tab_capsule.xml" value="0.27" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout-v31/items_product.xml" value="0.67" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/activity_detail.xml" value="0.2" />
@@ -40,6 +44,7 @@
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_training.xml" value="0.17603850050658562" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_wishlist.xml" value="0.23143115942028986" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_cart.xml" value="0.5" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_like.xml" value="0.25" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_popular_products.xml" value="0.3625" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_product_search.xml" value="0.22" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_products.xml" value="0.67" />
