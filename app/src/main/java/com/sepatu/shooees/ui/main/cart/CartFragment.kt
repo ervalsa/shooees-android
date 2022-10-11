@@ -38,4 +38,9 @@ class CartFragment : Fragment() {
             adapter = cartAdapter
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
