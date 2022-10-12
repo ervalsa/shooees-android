@@ -1,5 +1,6 @@
 package com.sepatu.shooees.ui.main.wishlist
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sepatu.shooees.data.entity.ProductEntity
 import com.sepatu.shooees.databinding.ItemLikeBinding
+import com.sepatu.shooees.ui.detail.DetailActivity
 
 class WishlistAdapter : RecyclerView.Adapter<WishlistAdapter.WishlistViewHolder>() {
 
@@ -41,7 +43,9 @@ class WishlistAdapter : RecyclerView.Adapter<WishlistAdapter.WishlistViewHolder>
                     .into(imgProduct)
 
                 itemView.setOnClickListener {
-                    Toast.makeText(itemView.context, "Item di klik", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.EXTRA_DATA, like.id)
+                    itemView.context.startActivity(intent)
                 }
             }
         }

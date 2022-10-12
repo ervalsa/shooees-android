@@ -32,8 +32,6 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
-
     }
 
     private fun playAnimation() {

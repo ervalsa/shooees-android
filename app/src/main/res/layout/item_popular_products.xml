@@ -49,6 +49,8 @@
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Sepatu Ultra 4D"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toTopOf="@+id/tv_price"

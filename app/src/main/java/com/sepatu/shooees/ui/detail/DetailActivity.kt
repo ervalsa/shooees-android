@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.sepatu.shooees.R
+import com.sepatu.shooees.data.entity.CartEntity
 import com.sepatu.shooees.data.entity.ProductEntity
 import com.sepatu.shooees.databinding.ActivityDetailBinding
 import com.sepatu.shooees.utils.DataDummy
@@ -30,6 +31,26 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
         }
+
+        if (extras != null) {
+            val cartId = extras.getInt(EXTRA_DATA)
+            for (cart in DataDummy.generateDataCart()) {
+                if (cart.id == cartId) {
+                    populateCart(cart)
+                }
+            }
+        }
+    }
+
+    fun populateCart(cartEntity: CartEntity) {
+        binding.tvTitleProduct.text = cartEntity.name
+        binding.tvCategory.text = cartEntity.category
+        binding.tvPrice.text = cartEntity.price.toString()
+        binding.tvDescription.text = cartEntity.description
+
+        Glide.with(this)
+            .load(cartEntity.image)
+            .into(binding.imgProduct)
     }
 
     fun populateData(productEntity: ProductEntity) {

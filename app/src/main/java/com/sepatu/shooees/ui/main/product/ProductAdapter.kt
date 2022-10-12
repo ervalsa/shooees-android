@@ -1,11 +1,13 @@
 package com.sepatu.shooees.ui.main.product
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sepatu.shooees.data.entity.ProductEntity
 import com.sepatu.shooees.databinding.ItemProductSearchBinding
+import com.sepatu.shooees.ui.detail.DetailActivity
 
 class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 
@@ -41,7 +43,9 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
                     .into(imgProduct)
 
                 itemView.setOnClickListener {
-
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.EXTRA_DATA, product.id)
+                    itemView.context.startActivity(intent)
                 }
             }
         }
