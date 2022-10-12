@@ -39,8 +39,8 @@
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_cart.xml" value="0.33" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_product.xml" value="0.25" />
-        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
-        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_profile_account.xml" value="0.3625" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_profile_account.xml" value="0.25" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_profile_general.xml" value="0.3625" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_running.xml" value="0.17603850050658562" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/fragment_training.xml" value="0.17603850050658562" />
@@ -50,6 +50,8 @@
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_popular_products.xml" value="0.3625" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_product_search.xml" value="0.22" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_products.xml" value="0.67" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_profile_menu.xml" value="0.221875" />
+        <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/item_profile_setting.xml" value="0.33" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/items_product.xml" value="0.21784420289855072" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/layout/items_shoes.xml" value="0.25" />
         <entry key="..\:/DevelopmentProject/Android/My-Project/Shooees/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2518518518518518" />
