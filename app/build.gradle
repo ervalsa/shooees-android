@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-parcelize'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -16,6 +17,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BASE_URL", '"http://shooees-sepatu.my.id/api/"'
     }
 
     buildTypes {
@@ -67,4 +70,21 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:$okHttp3_version"
     implementation "com.squareup.okhttp3:okhttp-urlconnection:$okHttp3_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3_version"
+
+    // datastore
+    def datastore_version = "1.0.0"
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+    implementation "androidx.datastore:datastore-preferences:$datastore_version"
+
+    // livedata
+    def livedata_version = '2.5.1'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$livedata_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:$livedata_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$livedata_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$livedata_version"
+
+    // Room
+    def room_version = '2.5.0-alpha02'
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 }

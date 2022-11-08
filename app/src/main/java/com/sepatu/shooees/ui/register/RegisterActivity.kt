@@ -26,6 +26,44 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupRegister() {
+        val name = binding.nameEditText.text.toString()
+        val username = binding.usernameEditText.text.toString()
+        val email = binding.emailEditText.text.toString()
+        val password = binding.passwordEditText.text.toString()
+
+        when {
+            name.isEmpty() -> {
+                binding.nameEditText.error = "Nama tidak boleh kosong"
+            }
+
+            username.isEmpty() -> {
+                binding.usernameEditText.error = "Username tidak boleh kosong"
+            }
+
+            email.isEmpty() -> {
+                binding.emailEditText.error = "Email tidak boleh kosong"
+            }
+
+            password.isEmpty() -> {
+                binding.passwordEditText.error = "Password tidak boleh kosong"
+            }
+
+            else -> {
+                registerAuth()
+            }
+        }
+    }
+
+    private fun registerAuth() {
+        val name = binding.nameEditText.text.toString()
+        val username = binding.usernameEditText.text.toString()
+        val email = binding.emailEditText.text.toString()
+        val password = binding.passwordEditText.text.toString()
+
+
+    }
+
     private fun playAnimation() {
         val titleSignUp = ObjectAnimator.ofFloat(binding.tvSignUp, View.ALPHA, 1f).setDuration(500)
         val descSignUp = ObjectAnimator.ofFloat(binding.tvDescSignUp, View.ALPHA, 1f).setDuration(500)
