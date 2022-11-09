@@ -94,7 +94,7 @@ class RegisterActivity : AppCompatActivity() {
                     showLoading(false)
                     AlertDialog.Builder(this@RegisterActivity).apply {
                         setTitle("Selamat!")
-                        setMessage("Akun anda sudah jadi, mari login dan buat cerita menarik.")
+                        setMessage("Akun anda sudah jadi. Habiskan uangmu dengan belanja Sepatu")
                         setPositiveButton("Lanjut") { _, _ ->
                             finish()
                         }
