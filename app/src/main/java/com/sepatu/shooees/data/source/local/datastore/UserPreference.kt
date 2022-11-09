@@ -40,6 +40,11 @@ class UserPreference private constructor(private val dataStore: DataStore<Prefer
     suspend fun saveUser(user: UserEntity) {
         dataStore.edit { preferences ->
             preferences[NAME_KEY] = user.name
+            preferences[EMAIL_KEY] = user.email
+            preferences[USERNAME_KEY] = user.username
+            preferences[PHONE_KEY] = user.phone.toString()
+            preferences[TOKEN_KEY] = user.token
+            preferences[LOGIN_STATE_KEY] = user.isLogin
         }
     }
 

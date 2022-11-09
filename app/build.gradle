@@ -18,7 +18,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", '"http://shooees-sepatu.my.id/api/"'
+        buildConfigField "String", "BASE_URL", '"http://103.13.207.74/api/"'
     }
 
     buildTypes {
