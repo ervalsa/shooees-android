@@ -22,45 +22,6 @@ class DetailActivity : AppCompatActivity() {
         binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val extras = intent.extras
-        if (extras != null) {
-            val productId = extras.getInt(EXTRA_DATA)
-            for (product in DataDummy.generateDataProduct()) {
-                if (product.id == productId) {
-                    populateData(product)
-                }
-            }
-        }
 
-        if (extras != null) {
-            val cartId = extras.getInt(EXTRA_DATA)
-            for (cart in DataDummy.generateDataCart()) {
-                if (cart.id == cartId) {
-                    populateCart(cart)
-                }
-            }
-        }
-    }
-
-    fun populateCart(cartEntity: CartEntity) {
-        binding.tvTitleProduct.text = cartEntity.name
-        binding.tvCategory.text = cartEntity.category
-        binding.tvPrice.text = cartEntity.price.toString()
-        binding.tvDescription.text = cartEntity.description
-
-        Glide.with(this)
-            .load(cartEntity.image)
-            .into(binding.imgProduct)
-    }
-
-    fun populateData(productEntity: ProductEntity) {
-        binding.tvTitleProduct.text = productEntity.name
-        binding.tvCategory.text = productEntity.category
-        binding.tvPrice.text = productEntity.price.toString()
-        binding.tvDescription.text = productEntity.description
-
-        Glide.with(this)
-            .load(productEntity.image)
-            .into(binding.imgProduct)
     }
 }

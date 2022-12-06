@@ -3,6 +3,7 @@ package com.sepatu.shooees.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import com.sepatu.shooees.data.source.local.room.ProductDao
+import com.sepatu.shooees.data.source.remote.response.product.ProductCategory
 import com.sepatu.shooees.data.source.remote.response.product.ProductDataItem
 import com.sepatu.shooees.data.source.remote.response.product.ProductResponse
 import com.sepatu.shooees.data.source.remote.retrofit.ApiService
@@ -32,7 +33,7 @@ class ProductRepository private constructor(
                     val productsList = ArrayList<ProductDataItem>()
                     appExecutors.diskIO.execute {
                         products?.forEach { product ->
-                            val products = ProductDataItem(
+                            val shoeProducts = ProductDataItem(
                                 product.id,
                                 product.name,
                                 product.price,
@@ -40,7 +41,7 @@ class ProductRepository private constructor(
                                 product.category,
                                 product.galleries
                             )
-                            productsList.add(product)
+                            productsList.add(shoeProducts)
                         }
                         productDao.deleteAll()
                         productDao.insertProducts(productsList)

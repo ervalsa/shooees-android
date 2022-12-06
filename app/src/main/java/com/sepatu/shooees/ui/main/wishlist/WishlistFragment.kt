@@ -25,19 +25,19 @@ class WishlistFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        showListLike()
+//        showListLike()
     }
 
-    fun showListLike() {
-        val likes = DataDummy.generateDataProduct()
-        val likeAdapter = WishlistAdapter()
-        likeAdapter.setLikeProducts(likes)
-        with(binding.rvLike) {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            setHasFixedSize(true)
-            adapter = likeAdapter
-        }
-    }
+//    fun showListLike() {
+//        val likes = DataDummy.generateDataProduct()
+//        val likeAdapter = WishlistAdapter()
+//        likeAdapter.setLikeProducts(likes)
+//        with(binding.rvLike) {
+//            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+//            setHasFixedSize(true)
+//            adapter = likeAdapter
+//        }
+//    }
 
     override fun onDestroy() {
         super.onDestroy()

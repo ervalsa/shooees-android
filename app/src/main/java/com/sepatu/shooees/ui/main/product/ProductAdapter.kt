@@ -39,8 +39,8 @@ class ProductAdapter : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() 
                 tvCategory.text = product.category
 
                 Glide.with(itemView.context)
-                    .load(product.image)
-                    .into(imgProduct)
+//                    .load(product.image)
+//                    .into(imgProduct)
 
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)

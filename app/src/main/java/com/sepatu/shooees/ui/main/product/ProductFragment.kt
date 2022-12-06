@@ -25,19 +25,19 @@ class ProductFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        showListProducts()
+//        showListProducts()
     }
 
-    fun showListProducts() {
-        val products = DataDummy.generateDataProduct()
-        val productAdapter = ProductAdapter()
-        productAdapter.setListProducts(products)
-        with(binding.rvSearchProduct) {
-            layoutManager = GridLayoutManager(context, 2)
-            setHasFixedSize(true)
-            adapter = productAdapter
-        }
-    }
+//    fun showListProducts() {
+//        val products = DataDummy.generateDataProduct()
+//        val productAdapter = ProductAdapter()
+//        productAdapter.setListProducts(products)
+//        with(binding.rvSearchProduct) {
+//            layoutManager = GridLayoutManager(context, 2)
+//            setHasFixedSize(true)
+//            adapter = productAdapter
+//        }
+//    }
 
     override fun onDestroy() {
         super.onDestroy()

@@ -39,8 +39,8 @@ class WishlistAdapter : RecyclerView.Adapter<WishlistAdapter.WishlistViewHolder>
                 tvPrice.text = "Rp. " + like.price.toString()
 
                 Glide.with(itemView.context)
-                    .load(like.image)
-                    .into(imgProduct)
+//                    .load(like.image)
+//                    .into(imgProduct)
 
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
