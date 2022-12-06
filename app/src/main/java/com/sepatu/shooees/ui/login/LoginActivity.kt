@@ -65,11 +65,11 @@ class LoginActivity : AppCompatActivity() {
                     showLoading(false)
                     loginViewModel.saveUser(
                         UserEntity(
-                            responseBody.data.user.name,
-                            responseBody.data.user.email,
-                            responseBody.data.user.username,
-                            responseBody.data.user.phone,
-                            responseBody.data.accessToken,
+                            responseBody.userData.user.name,
+                            responseBody.userData.user.email,
+                            responseBody.userData.user.username,
+                            responseBody.userData.user.phone,
+                            responseBody.userData.accessToken,
                             isLogin = true
                         )
                     )
