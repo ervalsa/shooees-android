@@ -7,12 +7,12 @@ data class ProductResponse(
     @field:SerializedName("code")
     val code: Int,
 
-    @field:SerializedName("data")
-    val productData: ProductData,
+    @field:SerializedName("status")
+    val status: String,
 
     @field:SerializedName("message")
     val message: String,
 
-    @field:SerializedName("status")
-    val status: String
+    @field:SerializedName("data")
+    val productData: ProductData,
 )

@@ -6,6 +6,7 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.sepatu.shooees.data.entity.UserEntity
 import com.sepatu.shooees.data.source.local.datastore.UserPreference
+import com.sepatu.shooees.data.source.remote.response.product.ProductDataItem
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val preference: UserPreference) : ViewModel() {
@@ -18,4 +19,6 @@ class MainViewModel(private val preference: UserPreference) : ViewModel() {
             preference.logout()
         }
     }
+
+
 }

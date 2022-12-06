@@ -27,7 +27,5 @@ interface ApiService {
     ) : Call<AuthResponse>
 
     @GET("products")
-    fun listProducts(
-
-    ) : Call<ProductResponse>
+    fun listProducts() : Call<ProductResponse>
 }

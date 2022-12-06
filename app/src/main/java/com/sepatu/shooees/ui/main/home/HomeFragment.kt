@@ -40,8 +40,8 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupViewModel()
-        showListAllProducts()
-        showListPopularProducts()
+//        showListAllProducts()
+//        showListPopularProducts()
 
         mainViewModel.getUser().observe(viewLifecycleOwner) { user ->
             if (user.isLogin) {
@@ -51,27 +51,27 @@ class HomeFragment : Fragment() {
         }
     }
 
-    fun showListPopularProducts() {
-        val products = DataDummy.generateDataProduct()
-        val productAdapter = PopularProductAdapter()
-        productAdapter.setPopularProducts(products)
-        with(binding.rvPopularShoe) {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-            setHasFixedSize(true)
-            adapter = productAdapter
-        }
-    }
-
-    fun showListAllProducts() {
-        val products = DataDummy.generateDataProduct()
-        val productAdapter = AllProductAdapter()
-        productAdapter.setAllProducts(products)
-        with(binding.rvAllShoe) {
-            layoutManager = LinearLayoutManager(context)
-            setHasFixedSize(true)
-            adapter = productAdapter
-        }
-    }
+//    fun showListPopularProducts() {
+//        val products = DataDummy.generateDataProduct()
+//        val productAdapter = PopularProductAdapter()
+//        productAdapter.setPopularProducts(products)
+//        with(binding.rvPopularShoe) {
+//            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//            setHasFixedSize(true)
+//            adapter = productAdapter
+//        }
+//    }
+//
+//    fun showListAllProducts() {
+//        val products = DataDummy.generateDataProduct()
+//        val productAdapter = AllProductAdapter()
+//        productAdapter.setAllProducts(products)
+//        with(binding.rvAllShoe) {
+//            layoutManager = LinearLayoutManager(context)
+//            setHasFixedSize(true)
+//            adapter = productAdapter
+//        }
+//    }
 
     private fun setupViewModel() {
         mainViewModel = ViewModelProvider(
