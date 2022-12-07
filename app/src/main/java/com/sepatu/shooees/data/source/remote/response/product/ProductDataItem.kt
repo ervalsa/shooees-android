@@ -1,11 +1,15 @@
 package com.sepatu.shooees.data.source.remote.response.product
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.RawValue
 
 @Entity(tableName = "products")
+@Parcelize
 data class ProductDataItem(
 
     @field:ColumnInfo(name = "id")
@@ -32,4 +36,4 @@ data class ProductDataItem(
     @field:ColumnInfo(name = "galleries")
     @field:SerializedName("galleries")
     val galleries: List<ProductGallery>,
-)
+) : Parcelable

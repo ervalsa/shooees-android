@@ -23,6 +23,21 @@ class PopularProductAdapter : ListAdapter<ProductDataItem, PopularProductAdapter
     override fun onBindViewHolder(holder: PopularProductViewHolder, position: Int) {
         val product = getItem(position)
         holder.bind(product)
+
+        holder.itemView.setOnClickListener {
+            val data = ProductDataItem(
+                product.id,
+                product.name,
+                product.price,
+                product.description,
+                product.category,
+                product.galleries
+            )
+
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_PRODUCT, data)
+            it.context.startActivity(intent)
+        }
     }
 
     class PopularProductViewHolder(val binding: ItemPopularProductsBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -31,12 +46,11 @@ class PopularProductAdapter : ListAdapter<ProductDataItem, PopularProductAdapter
             binding.tvCategory.text = product.category.name
             binding.tvPrice.text = product.price.withCurrencyFormat()
             Glide.with(itemView.context)
-                .load(product.galleries[0].url)
+                .load(product.galleries.get(0).url)
                 .into(binding.imgProduct)
 
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.EXTRA_DATA, product.id)
                 itemView.context.startActivity(intent)
             }
         }

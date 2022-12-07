@@ -44,7 +44,6 @@ class CartAdapter : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_DATA, cart.id)
                     itemView.context.startActivity(intent)
                 }
             }

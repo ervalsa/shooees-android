@@ -39,7 +39,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_category"
-            tools:text="Adidas NMD R1" />
+            android:text="Adidas NMD R1" />
 
         <TextView
             android:id="@+id/tv_category"

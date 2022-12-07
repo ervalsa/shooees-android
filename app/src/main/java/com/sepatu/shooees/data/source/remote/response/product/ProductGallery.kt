@@ -1,7 +1,10 @@
 package com.sepatu.shooees.data.source.remote.response.product
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ProductGallery(
 
     @field:SerializedName("id")
@@ -12,4 +15,4 @@ data class ProductGallery(
 
     @field:SerializedName("url")
     val url: String
-)
+) : Parcelable

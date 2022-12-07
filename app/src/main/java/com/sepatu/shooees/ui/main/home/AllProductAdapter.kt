@@ -1,5 +1,6 @@
 package com.sepatu.shooees.ui.main.home
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sepatu.shooees.data.source.remote.response.product.ProductDataItem
 import com.sepatu.shooees.databinding.ItemProductsBinding
+import com.sepatu.shooees.ui.detail.DetailActivity
 import com.sepatu.shooees.utils.withCurrencyFormat
 
 class AllProductAdapter : ListAdapter<ProductDataItem, AllProductAdapter.AllProductViewHolder>(DIFF_CALLBACK) {
@@ -20,6 +22,21 @@ class AllProductAdapter : ListAdapter<ProductDataItem, AllProductAdapter.AllProd
     override fun onBindViewHolder(holder: AllProductViewHolder, position: Int) {
         val products = getItem(position)
         holder.bind(products)
+
+        holder.itemView.setOnClickListener {
+            val data = ProductDataItem(
+                products.id,
+                products.name,
+                products.price,
+                products.description,
+                products.category,
+                products.galleries
+            )
+
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_PRODUCT, data)
+            it.context.startActivity(intent)
+        }
     }
 
     class AllProductViewHolder(val binding: ItemProductsBinding) : RecyclerView.ViewHolder(binding.root){
