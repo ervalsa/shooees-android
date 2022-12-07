@@ -99,4 +99,24 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_all_shoes"
         tools:listitem="@layout/item_products" />
 
+    <ProgressBar
+        android:id="@+id/progressBar_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_popular_shoe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_popular_shoe" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_all_shoe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rv_all_shoe" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
