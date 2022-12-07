@@ -9,7 +9,7 @@ import com.sepatu.shooees.data.entity.ProductEntity
 import com.sepatu.shooees.data.source.remote.response.product.ProductDataItem
 import com.sepatu.shooees.utils.Converters
 
-@Database(entities = [ProductDataItem::class], version = 3, exportSchema = false)
+@Database(entities = [ProductDataItem::class], version = 4, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class ProductDatabase : RoomDatabase() {
     abstract fun productsDao(): ProductDao

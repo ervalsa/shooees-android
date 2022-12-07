@@ -32,7 +32,8 @@ class ProductAdapter() : ListAdapter<ProductDataItem, ProductAdapter.ProductView
                 product.price,
                 product.description,
                 product.category,
-                product.galleries
+                product.galleries,
+                product.isWished
             )
 
             val intent = Intent(it.context, DetailActivity::class.java)

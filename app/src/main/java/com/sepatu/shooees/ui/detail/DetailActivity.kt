@@ -1,15 +1,12 @@
 package com.sepatu.shooees.ui.detail
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.bumptech.glide.Glide
-import com.sepatu.shooees.R
-import com.sepatu.shooees.data.entity.CartEntity
-import com.sepatu.shooees.data.entity.ProductEntity
 import com.sepatu.shooees.data.source.remote.response.product.ProductDataItem
 import com.sepatu.shooees.databinding.ActivityDetailBinding
-import com.sepatu.shooees.utils.DataDummy
+import com.sepatu.shooees.ui.checkout.CheckoutActivity
 import com.sepatu.shooees.utils.withCurrencyFormat
 
 class DetailActivity : AppCompatActivity() {
@@ -28,6 +25,11 @@ class DetailActivity : AppCompatActivity() {
 
         product = intent.getParcelableExtra(EXTRA_PRODUCT)
         populateProduct()
+
+        binding.btnBuy.setOnClickListener {
+            val intent = Intent(this, CheckoutActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun populateProduct() {
