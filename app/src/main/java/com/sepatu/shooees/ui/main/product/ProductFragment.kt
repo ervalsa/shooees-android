@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,6 +21,7 @@ class ProductFragment : Fragment() {
 
     private var _binding: FragmentProductBinding? = null
     private val binding get() = _binding!!
+    private lateinit var productList: ArrayList<String>
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -36,7 +38,7 @@ class ProductFragment : Fragment() {
             factory
         }
 
-        val productAdapter = ProductAdapter()
+        val productAdapter = ProductAdapter(productList)
 
         homeViewModel.getProducts().observe(viewLifecycleOwner) { result ->
             if (result != null) {
@@ -64,6 +66,18 @@ class ProductFragment : Fragment() {
             setHasFixedSize(true)
             adapter = productAdapter
         }
+
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                productAdapter.filter.filter(newText)
+                return false
+            }
+
+        })
     }
 
     private fun showLoading(isLoading: Boolean) {
