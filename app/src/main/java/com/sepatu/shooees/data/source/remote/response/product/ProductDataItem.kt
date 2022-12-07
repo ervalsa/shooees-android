@@ -36,4 +36,7 @@ data class ProductDataItem(
     @field:ColumnInfo(name = "galleries")
     @field:SerializedName("galleries")
     val galleries: List<ProductGallery>,
+
+    @field:ColumnInfo(name = "wished")
+    var isWished: Boolean
 ) : Parcelable

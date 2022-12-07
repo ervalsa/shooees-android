@@ -3,14 +3,16 @@ package com.sepatu.shooees.ui.main.wishlist
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.sepatu.shooees.data.entity.ProductEntity
+import com.sepatu.shooees.data.source.remote.response.product.ProductDataItem
 import com.sepatu.shooees.databinding.ItemLikeBinding
 import com.sepatu.shooees.ui.detail.DetailActivity
 
-class WishlistAdapter : RecyclerView.Adapter<WishlistAdapter.WishlistViewHolder>() {
+class WishlistAdapter(private val onWishClick: (ProductDataItem) -> Unit) : ListAdapter<ProductDataItem, WishlistAdapter.WishlistViewHolder>(DIFF_CALLBACK) {
 
     private var listLike = ArrayList<ProductEntity>()
 
@@ -48,5 +50,25 @@ class WishlistAdapter : RecyclerView.Adapter<WishlistAdapter.WishlistViewHolder>
                 }
             }
         }
+    }
+
+    companion object {
+        val DIFF_CALLBACK: DiffUtil.ItemCallback<ProductDataItem> =
+            object : DiffUtil.ItemCallback<ProductDataItem>() {
+                override fun areItemsTheSame(
+                    oldItem: ProductDataItem,
+                    newItem: ProductDataItem
+                ): Boolean {
+                    return oldItem.name == newItem.name
+                }
+
+                override fun areContentsTheSame(
+                    oldItem: ProductDataItem,
+                    newItem: ProductDataItem
+                ): Boolean {
+                    return oldItem == newItem
+                }
+
+            }
     }
 }

@@ -33,13 +33,15 @@ class ProductRepository private constructor(
                     val productsList = ArrayList<ProductDataItem>()
                     appExecutors.diskIO.execute {
                         products?.forEach { product ->
+                            val isWished = productDao.isProductsWished(product.name)
                             val shoeProducts = ProductDataItem(
                                 product.id,
                                 product.name,
                                 product.price,
                                 product.description,
                                 product.category,
-                                product.galleries
+                                product.galleries,
+                                isWished
                             )
                             productsList.add(shoeProducts)
                         }
@@ -60,6 +62,17 @@ class ProductRepository private constructor(
         }
 
         return result
+    }
+
+    fun getWishedProducts(): LiveData<List<ProductDataItem>> {
+        return productDao.getWishedProducts()
+    }
+
+    fun setWishedProducts(products: ProductDataItem, wishState: Boolean) {
+        appExecutors.diskIO.execute {
+            products.isWished = wishState
+            productDao.updateProducts(products)
+        }
     }
 
     companion object {
